@@ -1,5 +1,6 @@
 package ir.mobilemaster.newscompose.presentation.onBoarding
 
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -31,9 +32,7 @@ fun OnBoardingScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        val pagerState = rememberPagerState(
-            initialPage = 0,
-        ) {
+        val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
         }
 

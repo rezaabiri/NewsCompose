@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "ir.mobilemaster.newscompose"
+    namespace = "ir.mobilemaster.shopCompose"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ir.mobilemaster.newscompose"
+        applicationId = "ir.mobilemaster.shopCompose"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -75,13 +75,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.work)
-    // When using Kotlin.
     kapt(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+    implementation (libs.androidx.lifecycle.livedata)
+    implementation (libs.logging.interceptor)
+    implementation("io.coil-kt:coil-compose:2.7.0")
+
+
 
 }
 kapt {

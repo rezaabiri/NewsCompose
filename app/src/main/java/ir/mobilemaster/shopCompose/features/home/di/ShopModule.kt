@@ -12,7 +12,7 @@ import ir.mobilemaster.shopCompose.features.home.data.repositories.ShopRepositor
 object ShopModule {
 
     @Provides
-    fun provideNewsRepository(apiService: ShopApiService): ShopRepository {
+    fun provideShopRepository(apiService: ShopApiService): ShopRepository {
         return ShopRepository(apiService)
     }
 }

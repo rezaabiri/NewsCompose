@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
             shopComposeTheme {
                 Scaffold { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        NewsApp()
+                        ShopApp()
 
                     }
                 }

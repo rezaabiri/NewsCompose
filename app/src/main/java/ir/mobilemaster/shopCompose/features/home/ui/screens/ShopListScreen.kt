@@ -19,7 +19,7 @@ import ir.mobilemaster.shopCompose.features.home.ui.widgets.ProductItemRow
 import ir.mobilemaster.shopCompose.features.home.viewmodel.ShopViewModel
 
 @Composable
-fun NewsListScreen(viewModel: ShopViewModel, onProductItemClick: (Int) -> Unit) {
+fun ProductListScreen(viewModel: ShopViewModel, onProductItemClick: (Int) -> Unit) {
     LaunchedEffect(Unit) {
         viewModel.fetchProductsList()
     }

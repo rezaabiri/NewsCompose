@@ -21,25 +21,25 @@ import coil.compose.AsyncImage
 import ir.mobilemaster.shopCompose.features.home.viewmodel.ShopViewModel
 
 @Composable
-fun NewsDetailScreen(viewModel: ShopViewModel, newsId: Int) {
-    LaunchedEffect(newsId) {
-        viewModel.fetchProductDetails(newsId)
+fun ShopDetailScreen(viewModel: ShopViewModel, productId: Int) {
+    LaunchedEffect(productId) {
+        viewModel.fetchProductDetails(productId)
     }
 
-    val newsDetails by viewModel.selectedNews.collectAsState()
+    val productDetails by viewModel.selectedProduct.collectAsState()
 
-    newsDetails?.let { newsItem ->
+    productDetails?.let { productItem ->
         Column(modifier = Modifier.padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
             AsyncImage(
-                model = newsItem.image,
+                model = productItem.image,
                 contentDescription = "Translated description of what the image contains",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier.clip(RoundedCornerShape(10.dp))
             )
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = newsItem.title, modifier = Modifier.fillMaxWidth(), style = MaterialTheme.typography.titleLarge)
+            Text(text = productItem.title, modifier = Modifier.fillMaxWidth(), style = MaterialTheme.typography.titleLarge)
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = newsItem.description, style = MaterialTheme.typography.bodyMedium)
+            Text(text = productItem.description, style = MaterialTheme.typography.bodyMedium)
         }
     }
 }

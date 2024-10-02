@@ -17,7 +17,7 @@ class ShopViewModel @Inject constructor(private val repository: ShopRepository) 
     val shopList: StateFlow<List<ShopModel>> = _shopList
 
     private val _selectedProduct = MutableStateFlow<ShopModel?>(null)
-    val selectedNews: StateFlow<ShopModel?> = _selectedProduct
+    val selectedProduct: StateFlow<ShopModel?> = _selectedProduct
 
     fun fetchProductsList() {
         viewModelScope.launch {

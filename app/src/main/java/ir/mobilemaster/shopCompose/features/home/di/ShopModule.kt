@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import ir.mobilemaster.shopCompose.features.home.data.data_source.local.ProductDao
 import ir.mobilemaster.shopCompose.features.home.data.data_source.remote.ShopApiService
 import ir.mobilemaster.shopCompose.features.home.data.repositories.ShopRepository
 
@@ -12,7 +13,7 @@ import ir.mobilemaster.shopCompose.features.home.data.repositories.ShopRepositor
 object ShopModule {
 
     @Provides
-    fun provideShopRepository(apiService: ShopApiService): ShopRepository {
-        return ShopRepository(apiService)
+    fun provideShopRepository(apiService: ShopApiService, productDao: ProductDao): ShopRepository {
+        return ShopRepository(apiService, productDao)
     }
 }

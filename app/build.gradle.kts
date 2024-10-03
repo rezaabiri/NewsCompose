@@ -88,6 +88,8 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
+    implementation (libs.accompanist.navigation.animation)
+
 
 
 

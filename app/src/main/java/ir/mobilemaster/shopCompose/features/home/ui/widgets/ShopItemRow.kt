@@ -32,7 +32,7 @@ import ir.mobilemaster.shopCompose.features.home.data.models.ShopModel
 fun ProductItemRow(productItem: ShopModel, onClick: () -> Unit) {
     Row(modifier = Modifier
         .fillMaxWidth()
-        .padding(8.dp)
+        .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp)
         .shadow(8.dp, shape = RoundedCornerShape(10.dp))
         .clip(RoundedCornerShape(10.dp))
         .background(color = Color.White)

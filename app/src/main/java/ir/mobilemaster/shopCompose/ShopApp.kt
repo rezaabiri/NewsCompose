@@ -41,7 +41,7 @@ fun ShopApp() {
                     animationSpec = tween(500)
                 )
             }
-        ) { navBackStackEntry ->
+        ) {
             ProfileScreen()
 
         }

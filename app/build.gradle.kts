@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "ir.mobilemaster.shopCompose"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "ir.mobilemaster.shopCompose"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -89,7 +89,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
     implementation (libs.accompanist.navigation.animation)
-
+    implementation ( "androidx.work:work-runtime-ktx:2.8.1")
 
 
 

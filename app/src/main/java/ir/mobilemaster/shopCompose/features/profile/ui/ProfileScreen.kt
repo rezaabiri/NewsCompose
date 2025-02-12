@@ -70,8 +70,7 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
         ) {
 
         }
-
-
+        Spacer(modifier = Modifier.height(8.dp))
         CompositionLocalProvider(value = LocalLayoutDirection provides LayoutDirection.Rtl) {
             OutlinedTextField(
                 shape = RoundedCornerShape(8.dp),

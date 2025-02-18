@@ -8,6 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ir.mobilemaster.shopCompose.core.AppDatabase
+import ir.mobilemaster.shopCompose.features.category.data.data_source.remote.CategoryApiService
 import ir.mobilemaster.shopCompose.features.home.data.data_source.local.ProductDao
 import ir.mobilemaster.shopCompose.features.home.data.data_source.remote.ShopApiService
 import okhttp3.OkHttpClient
@@ -68,5 +69,10 @@ object AppModule {
     @Singleton
     fun provideShopApiService(retrofit: Retrofit): ShopApiService {
         return retrofit.create(ShopApiService::class.java)
+    }
+    @Provides
+    @Singleton
+    fun provideCategoryApiService(retrofit: Retrofit): CategoryApiService {
+        return retrofit.create(CategoryApiService::class.java)
     }
 }

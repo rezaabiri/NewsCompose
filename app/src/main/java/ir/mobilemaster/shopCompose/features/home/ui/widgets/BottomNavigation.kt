@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
@@ -47,6 +48,9 @@ fun BottomNavigation(modifier: Modifier = Modifier, navController: NavController
     ) {
         NavigationItem("Home", imageVector = Icons.Default.Home, onClick = {})
         NavigationItem("Bookmark", imageVector = Icons.Default.Favorite, onClick = {})
+        NavigationItem("Category", imageVector = Icons.Default.Face, onClick = {
+            navController.navigate("categoryList")
+        })
         NavigationItem("Profile", imageVector = Icons.Default.Person, onClick = {
             navController.navigate("profile")
         })

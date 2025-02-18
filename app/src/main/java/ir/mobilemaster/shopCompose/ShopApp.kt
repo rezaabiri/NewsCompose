@@ -7,6 +7,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ir.mobilemaster.shopCompose.features.category.ui.screens.CategoryScreen
 import ir.mobilemaster.shopCompose.features.home.ui.screens.ShopDetailScreen
 import ir.mobilemaster.shopCompose.features.home.ui.screens.ProductListScreen
 import ir.mobilemaster.shopCompose.features.profile.ui.ProfileScreen
@@ -43,7 +44,14 @@ fun ShopApp() {
             }
         ) {
             ProfileScreen()
-
+        }
+        composable(
+            "categoryList",
+        ) {
+            CategoryScreen(
+                viewModel = hiltViewModel(),
+                navController
+            )
         }
     }
 }
